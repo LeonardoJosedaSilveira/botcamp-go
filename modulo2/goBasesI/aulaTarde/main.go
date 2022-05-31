@@ -72,6 +72,61 @@ func exercise2() {
 	}
 }
 
+func exercise3() {
+	ms := []string{
+		"Janeiro",
+		"Fevereiro",
+		"Março",
+		"Abril",
+		"Maio",
+		"Junho",
+		"Julho",
+		"Agosto",
+		"Setembro",
+		"Outubro",
+		"Novembro",
+		"Dezembro",
+	}
+
+	mes1 := 1
+	mes10 := 10
+	mes12 := 12
+
+	fmt.Println("Mês 1: ", ms[mes1-1])
+	fmt.Println("Mês 10: ", ms[mes10-1])
+	fmt.Println("Mês 12: ", ms[mes12-1])
+}
+
+func exercise4() {
+	var employees = map[string]int{
+		"Benjamin": 20,
+		"Manuel": 26,
+		"Brenda": 19,
+		"Dario": 44,
+		"Pdro": 30,
+	}
+
+	fmt.Println("idade de Benjamin:", employees["Benjamin"])
+
+	c := 0
+	for _, v := range employees {
+		if v > 21 {
+			c++
+		}
+	}
+	fmt.Println("funcionários com mais de 21 anos: %d\n", c)
+
+	fmt.Println("##### adicionar Frederico")
+	fmt.Println("antes:", employees)
+	employees["Frederico"] = 25
+	fmt.Println("depois:", employees)
+
+	fmt.Println("##### excluir Pedro")
+	fmt.Println("antes:", employees)
+	delete(employees, "Pedro")
+	fmt.Println("depois:", employees)
+}
+
 func main() {
-	exercise2()
+	exercise4()
 }
